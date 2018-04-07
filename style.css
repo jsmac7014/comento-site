@@ -1,30 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
+:root {
+    --main-color: #444444;
+    --title-color: #fff;
+}
 
 html,
 body {
     width: 100%;
-    height: 100%;
 }
 
 body {
     margin: 0 auto;
     font-family: 'Nanum Gothic', sans-serif;
+    color: var(--main-color);
+    scroll-behavior: smooth;
 }
-.circle{
-    width: 100px;
-    height: 100px;
+.scrollBtn{
+    background: none;
+    outline: none;
+    border:none;
+    font-size: 1.1em;
 }
-
-.circle a svg{
-    width:100px;
-    height: 80px;
-    color: black;
-}
-.circle:hover {
-    /* background-color: #89604a;
-    border: 1px solid #89604a; */
-}
-
 
 .navbar {
     height: 70px;
@@ -58,9 +54,9 @@ body {
 
 #landing-container {
     width: 100%;
-    height: 60%;
-    background-image: url("http://via.placeholder.com/780x432");
-    /* background-image: url("https://cdn-images-1.medium.com/max/1600/0*QUqE4WGF8_cC9bIl.jpg"); */
+    height: 500px;
+    /* background-image: url("http://via.placeholder.com/780x432"); */
+    background-image: url("https://cdn-images-1.medium.com/max/1600/0*QUqE4WGF8_cC9bIl.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,42 +69,31 @@ body {
     color: white;
 }
 
-#landing-container .circles{
-    display: flex;
-    flex-direction: row;
-}
-#landing-container .circle {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s, border 0.3s;
-    margin: 5px;
-}
-
-#apply-btn{
+#apply-btn {
     margin: 0 auto;
-    width: 150px;
-    height:50px;
+    width: 130px;
+    height: 50px;
     line-height: 50px;
     border: 2px solid #fff;
     border-radius: 25px;
-    transition:background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
-#apply-btn a{
+
+#apply-btn a {
     text-decoration: none;
     color: #fff;
 }
-#apply-btn:hover{
-    background-color: #444444;
-    border-color: #444444;
+polygon{
+    width: 100%;
+    height: 100%;
 }
 
+#apply-btn:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
 
-#about-container .abouts{
+#about-container .abouts {
     margin-top: 50px;
 }
 
@@ -119,7 +104,7 @@ body {
     line-height: 1.8em;
 }
 
-#about-container .about .question{
+#about-container .about .question {
     line-height: 2.5em;
     color: #444444;
 }
@@ -128,56 +113,63 @@ body {
     margin-left: 20px;
 }
 
-#lesson-container{
+#lesson-container {
     text-align: center;
+}
 
-}
-.title{
+.title {
     width: 40%;
-    margin: 100px auto  50px auto;
+    margin: 100px auto 50px auto;
 }
-.title h1{
+
+.title h1 {
     height: 100px;
     width: 100%;
     line-height: 100px;
-    background-color: #5e5d5d;
-    color: white;
+    background-color: var(--title-color);
+    color: var(--main-color);
     text-align: center;
-    -webkit-box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
-    -moz-box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
-    box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
+    -webkit-box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+    -moz-box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
+    box-shadow: 0px 0px 28px 0px rgba(212, 212, 212, 1);
 }
 
-#lesson-container #lessons{
-    width: 100%;    
-    max-width: 80%;    
-    margin: 0 auto;    
+#lessons-container #lessons {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-#lesson-container #lessons .lesson{
+
+#lessons-container #lessons .lesson {
     width: 200px;
     display: flex;
-    align-items: center;   
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     margin: 10px;
 }
-#lesson-container #lessons .lesson svg{
+
+#lessons-container #lessons .lesson svg {
     width: 150px;
-    height:150px;
+    height: 150px;
     color: #cccccc;
 }
-#lesson-container #lessons .lesson .desc h2{
+
+#lessons-container #lessons .lesson .desc h2 {
     font-weight: 700;
 }
-#contact-container{
-    height: 60%;
+#facebook svg{
+    color: var(--main-color);
+    width: 100px;
+    height: 100px;
 }
-#contact-container #contact{
+
+#contact-container #contact {
     width: 100%;
     max-width: 60%;
     margin: 0 auto;
@@ -185,21 +177,38 @@ body {
     flex-direction: column;
     align-items: center;
 }
-footer{
+
+footer {
     position: relative;
-  top: 150px;
-  height: 6em;
-  line-height: 6em;
-  margin: 0;
-  background-color: #444444;
-  text-align: center;
+    top: 150px;
+    height: 6em;
+    line-height: 6em;
+    margin: 0;
+    background-color: #444444;
+    text-align: center;
 }
-#copyright{
+#up-btn{
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    left: 50%;
+    bottom: 130px;
+    transform: translate(-50%);
+    border: none;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(196,196,196,1);
+    box-shadow: 0px 0px 5px 0px rgba(196,196,196,1);
+    visibility: hidden;
+}
+#copyright {
     font-weight: bold;
     color: white;
     margin-right: 20px;
     float: right;
-  }
+}
+
 @media screen and (max-width:768px) {
     #hello {
         margin: 10px;
@@ -208,18 +217,20 @@ footer{
         width: 80%;
         margin: 0 auto;
     }
-    .navlist{
+    .navlist {
         display: none;
     }
-    .title{
+    .title {
         width: 80%;
     }
-    #contact-container #contact{
+    #contact-container #contact {
         max-width: 100%;
     }
 }
-@media screen and (min-width:768px){
-    h2 > .line-break{
+
+@media screen and (min-width:768px) {
+    h2>.line-break {
         display: none;
-    } 
+    }
+
 }

@@ -12,16 +12,16 @@
 
 <body>
     <nav class="navbar">
-        <a href="http://www.comento.co.kr" id="logo">Comento</a>
+        <a href="#" id="logo">Comento</a>
         <ul class="navlist">
             <li>
-                <a href="#about-container">About</a>
+                <button class="scrollBtn" id="aboutBtn">About</button>
             </li>
             <li>
-                <a href="#lesson-container">Lessons</a>
+                <button class="scrollBtn" id="lessonsBtn">Lessons</button>
             </li>
             <li>
-                <a href="">Contact</a>
+                <button class="scrollBtn" id="contactBtn">Contact</button>
             </li>
         </ul>
     </nav>
@@ -34,18 +34,6 @@
                 <a href="#">지원하기</a>
             </div>
         </div>
-        <!-- <div class="circles">
-            <div class="circle" id="facebook">
-                <a href="#">
-                    <i data-feather="facebook"></i>
-                </a>
-            </div>
-            <div class="circle" id="apply">
-                <a href="">
-                    <i data-feather="send"></i>
-                </a>
-            </div>
-        </div> -->
     </div>
     <div id="about-container">
         <div class="title">
@@ -75,7 +63,7 @@
             </div>
         </div>
     </div>
-    <div id="lesson-container">
+    <div id="lessons-container">
         <div class="title">
             <h1>커리큘럼</h1>
         </div>
@@ -111,7 +99,7 @@
             <h1>Contact Us</h1>
         </div>
         <div id="contact">
-            <div class="circle" id="facebook">
+            <div id="facebook">
                 <a href="https://www.facebook.com/sunrincomento/">
                     <i data-feather="facebook"></i>
                 </a>
@@ -122,11 +110,48 @@
             </div>
         </div>
     </div>
+    <button id="up-btn">
+        <i data-feather="arrow-up"></i>
+    </button>
     <footer>
         <span id="copyright">© 2018. JWS. All rights reserved.</span>
     </footer>
+
     <script>
         feather.replace()
+
+        function scrollDown(name){
+            var fullname = "#"+name+"-container";
+            document.querySelector(fullname).scrollIntoView();
+        }
+        var first = document.getElementById("aboutBtn");   
+        var second = document.getElementById("lessonsBtn");   
+        var third = document.getElementById("contactBtn");   
+        var upBtn = document.getElementById("up-btn")
+        
+
+        first.addEventListener('click', ()=>{
+            scrollDown('about');
+        });
+        second.addEventListener('click', ()=>{
+            scrollDown('lessons')            
+        });
+        third.addEventListener('click', ()=>{
+            scrollDown('contact');
+        });
+        upBtn.addEventListener('click',()=>{
+            window.scrollTo(0,0);
+        });
+        
+        window.onscroll = function(ev) {
+        if ((window.innerHeight +window.pageYOffset) >= document.body.offsetHeight) {
+            upBtn.style.visibility = "visible" ;
+        }
+        else{
+            upBtn.style.visibility = "hidden" ;
+        }
+    };
+        
     </script>
 </body>
 
