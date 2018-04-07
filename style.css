@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
+
 html,
 body {
     width: 100%;
@@ -43,8 +44,8 @@ body {
 #landing-container {
     width: 100%;
     height: 60%;
-    /* background-image: url("http://via.placeholder.com/780x432"); */
-    background-image: url("https://cdn-images-1.medium.com/max/1600/0*QUqE4WGF8_cC9bIl.jpg");
+    background-image: url("http://via.placeholder.com/780x432");
+    /* background-image: url("https://cdn-images-1.medium.com/max/1600/0*QUqE4WGF8_cC9bIl.jpg"); */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,29 +98,34 @@ body {
     line-height: 1.8em;
 }
 
+#about-container .about .question{
+    line-height: 2.5em;
+    color: #444444;
+}
+
 #about-container .about .answ {
     margin-left: 20px;
 }
+
 #lesson-container{
     height: 60%;
     text-align: center;
 
 }
 .title{
-    max-width: 70%;
+    width: 40%;
     margin: 100px auto  50px auto;
-    
 }
 .title h1{
     height: 100px;
     width: 100%;
     line-height: 100px;
-    background-color: black;
+    background-color: #5e5d5d;
     color: white;
     text-align: center;
     -webkit-box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
--moz-box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
-box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
+    -moz-box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
+    box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
 }
 
 #lesson-container #lessons{
@@ -143,6 +149,10 @@ box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
 #lesson-container #lessons .lesson svg{
     width: 150px;
     height:150px;
+    color: #cccccc;
+}
+#lesson-container #lessons .lesson .desc h2{
+    font-weight: 700;
 }
 @media screen and (max-width:768px) {
     #hello {
@@ -155,4 +165,12 @@ box-shadow: 0px 0px 28px 0px rgba(212,212,212,1);
     .navlist{
         display: none;
     }
+    .title{
+        width: 80%;
+    }
+}
+@media screen and (min-width:768px){
+    h1 > .line-break{
+        display: none;
+    } 
 }
