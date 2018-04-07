@@ -122,7 +122,9 @@
 
         function scrollDown(name){
             var fullname = "#"+name+"-container";
-            document.querySelector(fullname).scrollIntoView();
+            document.querySelector(fullname).scrollIntoView({
+                behavior:'smooth'
+            });
         }
         var first = document.getElementById("aboutBtn");   
         var second = document.getElementById("lessonsBtn");   
@@ -140,10 +142,13 @@
             scrollDown('contact');
         });
         upBtn.addEventListener('click',()=>{
-            window.scrollTo(0,0);
+            window.scrollTo({
+                top:0,
+                behavior: "smooth"
+            });
         });
-        
-        window.onscroll = function(ev) {
+
+        window.onscroll = function() {
         if ((window.innerHeight +window.pageYOffset) >= document.body.offsetHeight) {
             upBtn.style.visibility = "visible" ;
         }

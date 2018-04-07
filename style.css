@@ -13,7 +13,6 @@ body {
     margin: 0 auto;
     font-family: 'Nanum Gothic', sans-serif;
     color: var(--main-color);
-    scroll-behavior: smooth;
 }
 .scrollBtn{
     background: none;
