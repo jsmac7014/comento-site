@@ -10,18 +10,18 @@
     <title>Comento</title>
 </head>
 
-<body>
+<body id="main">
     <nav class="navbar">
         <a href="#" id="logo">Comento</a>
         <ul class="navlist">
             <li>
-                <button class="scrollBtn" id="aboutBtn">About</button>
+                <button class="nosBtn" id="aboutBtn">About</button>
             </li>
             <li>
-                <button class="scrollBtn" id="lessonsBtn">Lessons</button>
+                <button class="nosBtn" id="lessonsBtn">Lessons</button>
             </li>
             <li>
-                <button class="scrollBtn" id="contactBtn">Contact</button>
+                <button class="nosBtn" id="contactBtn">Contact</button>
             </li>
         </ul>
     </nav>
@@ -120,43 +120,41 @@
     <script>
         feather.replace()
 
-        function scrollDown(name){
-            var fullname = "#"+name+"-container";
+        function scrollDown(name) {
+            var fullname = "#" + name + "-container";
             document.querySelector(fullname).scrollIntoView({
-                behavior:'smooth'
+                behavior: 'smooth'
             });
         }
-        var first = document.getElementById("aboutBtn");   
-        var second = document.getElementById("lessonsBtn");   
-        var third = document.getElementById("contactBtn");   
+        var first = document.getElementById("aboutBtn");
+        var second = document.getElementById("lessonsBtn");
+        var third = document.getElementById("contactBtn");
         var upBtn = document.getElementById("up-btn")
-        
+        var menuBtn = document.getElementById("menu-btn")
 
-        first.addEventListener('click', ()=>{
+        first.addEventListener('click', () => {
             scrollDown('about');
         });
-        second.addEventListener('click', ()=>{
-            scrollDown('lessons')            
+        second.addEventListener('click', () => {
+            scrollDown('lessons')
         });
-        third.addEventListener('click', ()=>{
+        third.addEventListener('click', () => {
             scrollDown('contact');
         });
-        upBtn.addEventListener('click',()=>{
+        upBtn.addEventListener('click', () => {
             window.scrollTo({
-                top:0,
+                top: 0,
                 behavior: "smooth"
             });
         });
 
-        window.onscroll = function() {
-        if ((window.innerHeight +window.pageYOffset) >= document.body.offsetHeight) {
-            upBtn.style.visibility = "visible" ;
-        }
-        else{
-            upBtn.style.visibility = "hidden" ;
-        }
-    };
-        
+        window.onscroll = function () {
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+                upBtn.style.visibility = "visible";
+            } else {
+                upBtn.style.visibility = "hidden";
+            }
+        };
     </script>
 </body>
 

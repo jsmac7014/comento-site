@@ -7,6 +7,7 @@
 html,
 body {
     width: 100%;
+    
 }
 
 body {
@@ -14,10 +15,10 @@ body {
     font-family: 'Nanum Gothic', sans-serif;
     color: var(--main-color);
 }
-.scrollBtn{
+.nosBtn {
     background: none;
     outline: none;
-    border:none;
+    border: none;
     font-size: 1.1em;
 }
 
@@ -53,9 +54,9 @@ body {
 
 #landing-container {
     width: 100%;
-    height: 500px;
+    height: 550px;
     /* background-image: url("http://via.placeholder.com/780x432"); */
-    background-image: url("https://cdn-images-1.medium.com/max/1600/0*QUqE4WGF8_cC9bIl.jpg");
+    background-image: url("https://images.pexels.com/photos/89724/pexels-photo-89724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,7 +83,8 @@ body {
     text-decoration: none;
     color: #fff;
 }
-polygon{
+
+polygon {
     width: 100%;
     height: 100%;
 }
@@ -162,7 +164,8 @@ polygon{
 #lessons-container #lessons .lesson .desc h2 {
     font-weight: 700;
 }
-#facebook svg{
+
+#facebook svg {
     color: var(--main-color);
     width: 100px;
     height: 100px;
@@ -186,7 +189,8 @@ footer {
     background-color: #444444;
     text-align: center;
 }
-#up-btn{
+
+#up-btn {
     width: 45px;
     height: 45px;
     position: fixed;
@@ -196,17 +200,21 @@ footer {
     border: none;
     background-color: #fff;
     border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(196,196,196,1);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(196,196,196,1);
-    box-shadow: 0px 0px 5px 0px rgba(196,196,196,1);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
+    box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 1);
     visibility: hidden;
 }
+
 #copyright {
     font-weight: bold;
     color: white;
     margin-right: 20px;
     float: right;
 }
+
+
+
 
 @media screen and (max-width:768px) {
     #hello {
@@ -227,9 +235,9 @@ footer {
     }
 }
 
+
 @media screen and (min-width:768px) {
     h2>.line-break {
         display: none;
     }
-
 }
