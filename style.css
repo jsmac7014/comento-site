@@ -10,6 +10,21 @@ body {
     margin: 0 auto;
     font-family: 'Nanum Gothic', sans-serif;
 }
+.circle{
+    width: 100px;
+    height: 100px;
+}
+
+.circle a svg{
+    width:100px;
+    height: 80px;
+    color: black;
+}
+.circle:hover {
+    /* background-color: #89604a;
+    border: 1px solid #89604a; */
+}
+
 
 .navbar {
     height: 70px;
@@ -74,16 +89,22 @@ body {
     margin: 5px;
 }
 
-.circle a{
-    width: 24px;
-    height:24px;
+#apply-btn{
+    margin: 0 auto;
+    width: 150px;
+    height:50px;
+    line-height: 50px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    transition:background-color 0.3s, border-color 0.3s;
 }
-.circle a svg{
-    color: white;
+#apply-btn a{
+    text-decoration: none;
+    color: #fff;
 }
-#landing-container .circle:hover {
-    background-color: #89604a;
-    border: 1px solid #89604a;
+#apply-btn:hover{
+    background-color: #444444;
+    border-color: #444444;
 }
 
 
@@ -108,7 +129,6 @@ body {
 }
 
 #lesson-container{
-    height: 60%;
     text-align: center;
 
 }
@@ -154,6 +174,17 @@ body {
 #lesson-container #lessons .lesson .desc h2{
     font-weight: 700;
 }
+#contact-container{
+    height: 60%;
+}
+#contact-container #contact{
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @media screen and (max-width:768px) {
     #hello {
         margin: 10px;
@@ -168,9 +199,12 @@ body {
     .title{
         width: 80%;
     }
+    #contact-container #contact{
+        max-width: 100%;
+    }
 }
 @media screen and (min-width:768px){
-    h1 > .line-break{
+    h2 > .line-break{
         display: none;
     } 
 }
