@@ -55,7 +55,6 @@ body {
 #landing-container {
     width: 100%;
     height: 550px;
-    /* background-image: url("http://via.placeholder.com/780x432"); */
     background-image: url("https://images.pexels.com/photos/89724/pexels-photo-89724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -159,6 +158,9 @@ polygon {
     width: 150px;
     height: 150px;
     color: #cccccc;
+}
+#lessons-container #lessons .lesson .desc{
+    text-align: center;     
 }
 
 #lessons-container #lessons .lesson .desc h2 {
